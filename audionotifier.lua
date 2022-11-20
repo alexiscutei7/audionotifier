@@ -1,6 +1,7 @@
 -- alex
 
 --[[
+
 * This module has ONE function. You can change the way the game notifies the player by changing the `informplyr` function
 
 * This is designed SPECIFICALLY for informing players that played an audio into their boombox that their audio didnt work
@@ -71,7 +72,7 @@ spawn(function()
 end)
 
 local function makeEntry(plyr, audioID)
-	table.insert(audioCache, {os.clock() + 75, plyr.UserId, audioID})
+	table.insert(audioCache, {os.clock() + 75, plyr.UserId, tostring(audioID)})
 end
 AudioNotifier.Log = makeEntry
 
